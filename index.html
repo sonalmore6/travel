@@ -25,6 +25,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
+      
 </head>
 
 <body>
@@ -51,13 +52,13 @@
               <div class="row align-items-center">
 
                 <div class="col-md-4">
-                  <img src="images/image 1.png" class="img-fluid rounded" alt="">
+                  <img src="images/image 1.png" class="img-fluid rounded" alt="" >
                 </div>
 
-                <div class="col-md-5">
+                <div class="col-md-4 ms-4">
                   <h4 class="fw-bold">Travel Insurance</h4>
                   <p class="text-muted">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam gravida tincidunt mi, in bibendum sapien pellentesque vitae. Vestibulum quis purus neque. Nam condimentum in lorem id facilisis.
                   </p>
                   <button class="btn btn-warning fw-semibold px-4">
                     GET A QUOTE
@@ -104,47 +105,63 @@
                 <p class="hero-subtitle">BREAKING THE LIMITS OF TRADITIONAL TRAVEL INSURANCE</p>
                 <h1>Find the Right Plan for You</h1>
             </div>
-
-            <div class="quote-card">
-
-                <div class="trip-tabs">
-                    <button class="tab active">Single Trip</button>
-                    <button class="tab">Multi Trip</button>
+<div class="quote-container">
+    <div class="trip-tabs">
+        <button class="tab" onclick="switchTab(event, 'single')">Single Trip</button>
+        <button class="tab active" onclick="switchTab(event, 'multi')">Multi Trip</button>
+    </div>
+    
+    <div class="quote-card">
+        <form class="quote-form" onsubmit="event.preventDefault(); alert('Quote requested!');">
+            <label>
+                Where are you travelling?
+                <select id="destination-select" onchange="addDestination(this)">
+                    <option value="">Type or choose your destination</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Bali (Indonesia)">Bali (Indonesia)</option>
+                    <option value="France">France</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Thailand">Thailand</option>
+                    <option value="USA">USA</option>
+                </select>
+                <div class="destination-tags" id="destination-tags">
+                    <span class="destination-tag">
+                        Austria
+                        <span class="remove" onclick="removeDestination(this)">×</span>
+                    </span>
+                    <span class="destination-tag">
+                        Bali (Indonesia)
+                        <span class="remove" onclick="removeDestination(this)">×</span>
+                    </span>
                 </div>
+            </label>
 
-                <form class="quote-form">
-                    <label>
-                        Where are you travelling?
-                        <select>
-                            <option value="">Type or choose your destination</option>
-                            <option>Austria</option>
-                            <option>Bali (Indonesia)</option>
-                        </select>
-                    </label>
+            <label>
+                When do you leave?
+                <input type="date" required>
+            </label>
 
-                    <label>
-                        When do you leave?
-                        <input type="date">
-                    </label>
+            <label>
+                When do you return?
+                <input type="date" required>
+            </label>
 
-                    <label>
-                        When do you return?
-                        <input type="date">
-                    </label>
+            <label>
+                Current age of all Travellers?
+                <div class="age-input">
+                    <input type="number" min="1" max="120" placeholder="Enter age" required>
+                    <button type="button" class="add-age" onclick="alert('Add another traveller age')">+</button>
+                </div>
+            </label>
 
-                    <label>
-                        Current age of all travellers?
-                        <div class="age-input">
-                            <input type="number" min="1" placeholder="Age">
-                            <button type="button" class="add-age">+</button>
-                        </div>
-                    </label>
+            <input type="text" placeholder="Promo Code" class="promo-input">
 
-                    <input type="text" placeholder="Promo Code" class="promo-input">
-
-                    <button type="submit" class="btn-primary">GET A QUOTE</button>
-                </form>
-            </div>
+            <button type="submit" class="btn-primary1">GET A QUOTE</button>
+        </form>
+    </div>
+</div>
         </div>
     </main>
 <!-- page3 -->
