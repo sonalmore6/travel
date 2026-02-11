@@ -202,7 +202,7 @@ body {
   cursor: pointer;
 }
 
-/* Promo */
+
 .promo-input {
   margin: 6px 0;
 }
@@ -219,9 +219,6 @@ body {
   cursor: pointer;
 }
 
-/* =========================
-   Mega Menu
-========================= */
 .mega-menu {
   position: absolute;
   left: 0;
@@ -253,9 +250,7 @@ body {
   font-weight: 600;
 }
 
-/* =========================
-   Active Header State
-========================= */
+
 .main-header.mega-active {
   background: #1f2a2e;
 }
@@ -268,9 +263,7 @@ body {
   filter: brightness(0) invert(1);
 }
 
-/* =========================
-   Navigation Layout
-========================= */
+
 .nav-list {
   display: flex;
   align-items: center;
@@ -286,10 +279,161 @@ body {
   color: #000;
   position: relative;
 }
+.main-container {
+            background: white;
+        }
+        .state-section {
+            background: white;
+            padding: 30px;
+            border-right: 1px solid #e0e0e0;
+           
+        }
+        .state-section1 , .state-section2 , .state-section5  {
+            background: white;
+            padding: 30px;
+            border-right: 1px solid #e0e0e0;
+           
+        }
+       
+        .state-section3 , .state-section4 {
+            height: 350px;
+            background: white;
+            padding: 30px;
+            border-right: 1px solid #e0e0e0;
+           
+        }
+        
+       
+        .state-section:last-child {
+            border-right: none;
+        }
+        .middle-section {
+            border-left: 1px solid #e0e0e0;
+            border-right: 1px solid #e0e0e0;
+        }
+        .state-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .state-description {
+            color: #6c757d;
+            font-size: 0.875rem;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+        .dropdown-custom {
+            position: relative;
+            width: 100%;
+        }
+        .dropdown-input {
+            width: 100%;
+            padding: 10px 40px 10px 12px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            cursor: pointer;
+        }
+        .dropdown-input:focus {
+            outline: none;
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+        }
+        .dropdown-icon {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+        .dropdown-menu-custom {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            margin-top: 4px;
+            max-height: 300px;
+            overflow-y: auto;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .dropdown-section-title {
+            padding: 8px 12px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            background-color: #f8f9fa;
+            color: #495057;
+        }
+        .dropdown-item-custom {
+            padding: 10px 12px;
+            cursor: pointer;
+            border-bottom: 1px solid #f1f1f1;
+        }
+        .dropdown-item-custom:hover {
+            background-color: #f8f9fa;
+        }
+        .dropdown-item-custom:last-child {
+            border-bottom: none;
+        }
+        .info-icon {
+            float: right;
+            color: #6c757d;
+        }
+        .empty-state {
+            padding: 40px 20px;
+            text-align: center;
+            color: #6c757d;
+        }
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            background-color: #1a1d29;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+        .chip-close {
+            margin-left: 8px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.1rem;
+            line-height: 1;
+            padding: 0;
+        }
+        .sidebar-section {
+            background: white;
+            padding: 30px;
+            min-height: 100vh;
+        }
+        .sidebar-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .instruction-item {
+            display: flex;
+            margin-bottom: 16px;
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+        .instruction-star {
+            color: #ffc107;
+            margin-right: 10px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .resources-section {
+            margin-top: 40px;
+        }
 
-/* =========================
-   Responsive (Tablet)
-========================= */
 @media (max-width: 992px) {
   .hero-content {
     grid-template-columns: 1fr;

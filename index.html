@@ -28,7 +28,7 @@
 </head>
 
 <body>
-
+<!-- page1 and page 2 -->
    <header class="main-header">
   <div class="container header-content">
 
@@ -147,7 +147,145 @@
             </div>
         </div>
     </main>
+<!-- page3 -->
+   <div class="container-fluid main-container">
+        <div class="row g-0">
+            <!-- Left Column -->
+            <div class="col-md-4">
+                <!-- Initial State -->
+                <div class="state-section">
+                    <h2 class="state-title">Initial State</h2>
+                    <p class="state-description">The initial state of the destinations dropdown before the user has interacted with it.</p>
+                    
+                    <label class="form-label fw-semibold mb-2">Where are you travelling?</label>
+                    <div class="dropdown-custom">
+                        <input type="text" class="dropdown-input" placeholder="Type or choose your destinations" readonly>
+                        <i class="bi bi-chevron-down dropdown-icon"></i>
+                    </div>
+                </div>
 
+                <!-- Dropdown Open State -->
+                <div class="state-section1" style="border-top: 1px solid #e0e0e0;">
+                    <h2 class="state-title">Dropdown Open State</h2>
+                    <p class="state-description">The user has focused on the input or clicked the dropdown arrow to display all available destinations.</p>
+                    
+                    <label class="form-label fw-semibold mb-2">Where are you travelling?</label>
+                    <div class="dropdown-custom">
+                        <input type="text" class="dropdown-input" placeholder="Type or choose your destinations" value="">
+                        <i class="bi bi-chevron-up dropdown-icon"></i>
+                        <div class="dropdown-menu-custom">
+                            <div class="dropdown-section-title">
+                                Popular Destinations
+                                <i class="bi bi-info-circle info-icon"></i>
+                            </div>
+                            <div class="dropdown-item-custom">Bali [Indonesia]</div>
+                            <div class="dropdown-item-custom">New Zealand</div>
+                            <div class="dropdown-item-custom">USA [United States]</div>
+                            <div class="dropdown-item-custom">United Kingdom</div>
+                            <div class="dropdown-item-custom" style="border-top: 1px solid #dee2e6; margin-top: 4px; padding-top: 12px;">World Wide</div>
+                            <div class="dropdown-item-custom">All of Europe</div>
+                            <div class="dropdown-item-custom">All of Asia</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Middle Column -->
+            <div class="col-md-4 middle-section">
+                <!-- Dropdown Search State -->
+                <div class="state-section3">
+                    <h2 class="state-title">Dropdown Search State</h2>
+                    <p class="state-description">The user begins typing a destination name, filtering the dropdown to show only matching destinations.</p>
+                    
+                    <label class="form-label fw-semibold mb-2">Where are you travelling?</label>
+                    <div class="dropdown-custom">
+                        <input type="text" class="dropdown-input" placeholder="Type or choose your destinations" value="Bal">
+                        <i class="bi bi-chevron-up dropdown-icon"></i>
+                        <div class="dropdown-menu-custom">
+                            <div class="dropdown-section-title">Popular Destinations</div>
+                            <div class="dropdown-item-custom">Bali [Indonesia]</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Empty Search State -->
+                <div class="state-section4" style="border-top: 1px solid #e0e0e0;">
+                    <h2 class="state-title">Empty Search State</h2>
+                    <p class="state-description">The user has entered a destination name that isn't in the list, resulting in an empty state message.</p>
+                    
+                    <label class="form-label fw-semibold mb-2">Where are you travelling?</label>
+                    <div class="dropdown-custom">
+                        <input type="text" class="dropdown-input" placeholder="Type or choose your destinations" value="Sample">
+                        <i class="bi bi-chevron-up dropdown-icon"></i>
+                        <div class="dropdown-menu-custom">
+                            <div class="empty-state">
+                                <strong>Destination not found</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination Selected State -->
+                <div class="state-section5" style="border-top: 1px solid #e0e0e0;">
+                    <h2 class="state-title">Destination Selected State</h2>
+                    <p class="state-description">The user has selected one or more destinations from the dropdown list.</p>
+                    
+                    <label class="form-label fw-semibold mb-2">Where are you travelling?</label>
+                    <div class="dropdown-custom mb-3">
+                        <input type="text" class="dropdown-input" placeholder="Type or choose your destinations" readonly>
+                        <i class="bi bi-chevron-down dropdown-icon"></i>
+                    </div>
+                    <div>
+                        <span class="chip">
+                            Austria
+                            <button class="chip-close" aria-label="Remove Austria">×</button>
+                        </span>
+                        <span class="chip">
+                            Bali [Indonesia]
+                            <button class="chip-close" aria-label="Remove Bali">×</button>
+                        </span>
+                        <span class="chip">
+                            Canada
+                            <button class="chip-close" aria-label="Remove Canada">×</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Sidebar -->
+            <div class="col-md-4">
+                <div class="sidebar-section ">
+                    <h3 class="sidebar-title">Additional Instructions</h3>
+                    
+                    <div class="instruction-item">
+                        <span class="instruction-star">★</span>
+                        <span>Users can select each destination only once, for example, if Bali is chosen multiple times, only a single chip is added below.</span>
+                    </div>
+                    
+                    <div class="instruction-item">
+                        <span class="instruction-star">★</span>
+                        <span>Clicking the close button on a chip removes that destination from the selected destinations list.</span>
+                    </div>
+                    
+                    <div class="instruction-item">
+                        <span class="instruction-star">★</span>
+                        <span>If the destination search returns no results, an empty state message should be displayed.</span>
+                    </div>
+                    
+                    <div class="instruction-item">
+                        <span class="instruction-star">★</span>
+                        <span>The dropdown should be keyboardaccessible, users can navigate the list using the arrow keys and select an item by pressing Enter.</span>
+                    </div>
+
+                    <div class="resources-section " style="border-top: 1px solid #e0e0e0; padding-top: 30px;">
+                        <h3 class="sidebar-title">Additional Resources</h3>
+                        <p class="state-description">This video demonstrates the various states of the dropdown list described in this Figma file.</p>
+                        <a href="https://drive.google.com/file/d/1ya0wJVltPLKmy7VFJnTrzSf2OvJRdkUq/view" class="text-primary text-decoration-none" target="_blank" style="font-size: 0.875rem; word-break: break-all;">https://drive.google.com/file/d/1ya0wJVltPLKmy7VFJnTrzSf2OvJRdkUq/view</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="task.js" defer></script>
 </body>
 
